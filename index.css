@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Creepster;
+    font-size: 2rem;
+}
+
+body {
+    background: radial-gradient(circle, rgb(231, 148, 148) 0%, rgba(227, 236, 96, 0.6) 100%);
+
+}
+
+.container {
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.players {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.dice {
+    width: 60%;
+}
+
+.image_div {
+    text-align: center;
+}
+
+img {
+    display: inline-block;
+    width: 450px;
+    border-radius: 5%;
+}
+
+h2 {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.btn {
+    width: 15%;
+    align-self: center;
+    padding: 20px;
+    border-radius: 35px 35px;
+    background-color: chocolate;
+    border: none;
+    box-shadow: 5px 5px 0.5 black;
+    font-size: 1.4rem;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgb(103, 51, 14);
+    color: white;
+    transform: scale(1.01);
+    transition: all 0.1s ease-in-out;
+    border: solid 2px chocolate;
+    /* box-shadow: 5px 5px .7; */
+}
+
+h1 {
+    color: rgb(103, 51, 14);
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+    font-weight: 500;
+    text-shadow: 8px 5px 8px chocolate;
+}

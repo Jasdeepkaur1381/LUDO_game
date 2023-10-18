@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUDO_game</title>
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="container">
+        <h1 class="header">Welcome to Ludo Game!</h1>
+        <div class="players">
+            <div class="dice">
+                <h2>Player 1</h2>
+                <div class="image_div">
+                    <img class="img1" src="images/dice1.jpg" alt="1" />
+                </div>
+
+            </div>
+            <div class="dice">
+                <h2>Player 2</h2>
+                <div class="image_div">
+                    <img class="img2" src="images/dice1.jpg" alt="1" />
+                </div>
+
+            </div>
+        </div>
+        <button class="btn" onclick="whoWin()">Throw
+        </button>
+    </section>
+
+    <script>
+        const whoWin = () => {
+            const num1 = Math.ceil(Math.random() * 6);
+            const num2 = Math.ceil(Math.random() * 6);
+
+            const play1dice = `images/dice${num1}.jpg`;
+            const play2dice = `images/dice${num2}.jpg`;
+            console.log(num1);
+            console.log(num2);
+            document.querySelector('.img1').src = play1dice;
+            document.querySelector('.img2').src = play2dice;
+            if (num1 > num2) {
+                document.querySelector('.header').innerHTML = "Player 1 wins";
+
+            }
+            else if (num2 > num1) {
+                document.querySelector('.header').innerHTML = "Player 2 wins";
+            }
+            else {
+                document.querySelector('.header').innerHTML = "It's a tie";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
